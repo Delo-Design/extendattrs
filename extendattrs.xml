@@ -9,15 +9,18 @@
 	<authorUrl>https://delo-design.ru</authorUrl>
 	<version>1.0</version>
 	<description>PLG_SYSTEM_EXTENDATTRS_XML_DESCRIPTION</description>
+
 	<files>
 		<filename plugin="extendattrs">extendattrs.php</filename>
 	</files>
-	<languages>
+
+	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.plg_system_extendattrs.ini</language>
 		<language tag="en-GB">en-GB/en-GB.plg_system_extendattrs.sys.ini</language>
 		<language tag="ru-RU">ru-RU/ru-RU.plg_system_extendattrs.ini</language>
 		<language tag="ru-RU">ru-RU/ru-RU.plg_system_extendattrs.sys.ini</language>
 	</languages>
+
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
@@ -28,25 +31,33 @@
 						label="PLG_SYSTEM_EXTENDATTRS_CONFIG_CONTEXT"
 						multiple="true"
 						layout="joomla.form.field.subform.repeatable-table"
-					>
-					<field
-						name="name"
-						type="text"
-						label="PLG_SYSTEM_EXTENDATTRS_CONFIG_CONTEXT_NAME"
-					/>
-					<field
-						name="field_ids"
-						type="text"
-						label="PLG_SYSTEM_EXTENDATTRS_CONFIG_CONTEXT_FIELD_IDS"
-					/>
-					<field
-						name="field_db"
-						type="text"
-						label="PLG_SYSTEM_EXTENDATTRS_CONFIG_CONTEXT_FIELD_DB"
-					/>
+				>
+					<form>
+						<field
+								name="name"
+								type="text"
+								label="PLG_SYSTEM_EXTENDATTRS_CONFIG_CONTEXT_NAME"
+						/>
+						<field
+								name="field_ids"
+								type="text"
+								label="PLG_SYSTEM_EXTENDATTRS_CONFIG_CONTEXT_FIELD_IDS"
+						/>
+						<field
+								name="fieldset_name"
+								type="text"
+								label="PLG_SYSTEM_EXTENDATTRS_CONFIG_CONTEXT_FIELDSET_NAME"
+						/>
+						<field
+								name="fields_name"
+								type="text"
+								label="PLG_SYSTEM_EXTENDATTRS_CONFIG_CONTEXT_FIELDS_NAME"
+						/>
+					</form>
 				</field>
 
 			</fieldset>
 		</fields>
 	</config>
+
 </extension>

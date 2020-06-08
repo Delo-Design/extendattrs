@@ -66,7 +66,7 @@ class plgSystemExtendattrs extends CMSPlugin
 
         foreach ($contexts as $context_param)
         {
-            if($context_param->context === $context)
+            if($context_param->name === $context)
             {
                 $find = $context_param;
             }
@@ -80,6 +80,7 @@ class plgSystemExtendattrs extends CMSPlugin
 
         $fields = $this->getData((array)$context_param->field_ids);
 
+
         if (!$fields)
         {
             return;
@@ -91,7 +92,8 @@ class plgSystemExtendattrs extends CMSPlugin
         }
 
         $xml = '<?xml version="1.0" encoding="utf-8"?><form>';
-        $xml .= '<fields name="params"><fieldset name="' . $context_param->field_db . '" label="' . Text::_('PLG_SYSTEM_EXTENDATTRS_TAB_LABEL') . '">';
+        $xml .= '<fieldset name="' . $context_param->fieldset_name . '" label="' . Text::_('PLG_SYSTEM_EXTENDATTRS_TAB_LABEL') . '">';
+        $xml .= '<fields name="' . $context_param->fields_name . '">';
 
         foreach ($fields as $field)
         {
@@ -129,12 +131,12 @@ class plgSystemExtendattrs extends CMSPlugin
             }
         }
 
+        $xml .= '</fields>';
         $xml .= '</fieldset>';
         $xml .= '</form>';
 
         $xml = new \SimpleXMLElement($xml);
         $form->setFields($xml, null, false);
-
         return true;
     }
 
