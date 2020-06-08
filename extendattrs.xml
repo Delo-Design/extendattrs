@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_EXTENDATTRS</name>
+	<author>Tsymbal</author>
+	<creationDate>08.06.2020</creationDate>
+	<copyright>Copyright © 2020 Delo Design. All rights reserved.</copyright>
+	<license>see license.txt</license>
+	<authorEmail>cymbal@delo-design.ru</authorEmail>
+	<authorUrl>https://delo-design.ru</authorUrl>
+	<version>1.0</version>
+	<description>PLG_SYSTEM_EXTENDATTRS_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="extendattrs">extendattrs.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB/en-GB.plg_system_extendattrs.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_extendattrs.sys.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_system_extendattrs.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_system_extendattrs.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field
+						name="context"
+						type="subform"
+						label="PLG_SYSTEM_EXTENDATTRS_CONFIG_CONTEXT"
+						multiple="true"
+						layout="joomla.form.field.subform.repeatable-table"
+					>
+					<field
+						name="name"
+						type="text"
+						label="PLG_SYSTEM_EXTENDATTRS_CONFIG_CONTEXT_NAME"
+					/>
+					<field
+						name="field_ids"
+						type="text"
+						label="PLG_SYSTEM_EXTENDATTRS_CONFIG_CONTEXT_FIELD_IDS"
+					/>
+					<field
+						name="field_db"
+						type="text"
+						label="PLG_SYSTEM_EXTENDATTRS_CONFIG_CONTEXT_FIELD_DB"
+					/>
+				</field>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>
